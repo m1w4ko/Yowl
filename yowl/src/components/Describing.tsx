@@ -8,20 +8,20 @@ import ReactStars from 'react-stars';
 import Review from "./Review";
 import { useEffect, useState } from "react";
 import { IRating } from "../types/IRating";
-import { ILikes } from "../types/ILikes";
+import { ILikes } from "../types/Ilikes";
 
 interface DescribingProps {
     business: IBusines,
     reviews: IReviews[],
-    users: IUsers | null,
-    rating: IRating | null
-    likes: ILikes[] | null
+    users?: IUsers | null,
+    rating?: IRating | null
+    likes?: ILikes[] | null
 }
 
-const Description = ({ business, reviews, rating }: DescribingProps) => {
+function Description({ business, reviews, rating }: DescribingProps) {
 
     const navigate = useNavigate();
-    const [reviewsFilter, setReviewsfilter] = useState(reviews)
+    const [reviewsFilter, setReviewsfilter] = useState(reviews);
     const [isLoggedIn, setIsLoggedIn] = useState<boolean>(!!localStorage.getItem("Token"));
     const [hasReviews, setHasReviews] = useState<boolean>(!!(reviews && reviews.length > 0));
     const [isMobile, setIsMobile] = useState<boolean>(window.innerWidth <= 768);
@@ -45,7 +45,7 @@ const Description = ({ business, reviews, rating }: DescribingProps) => {
     }, []);
 
 
-    console.log("ID", business)
+    console.log("ID", business);
 
 
     useEffect(() => {
@@ -70,11 +70,11 @@ const Description = ({ business, reviews, rating }: DescribingProps) => {
                     <div className="image-rate">
                         <img src={business.image} className="bloc1-image" alt="logo of the company described" />
                         {reviews && reviews.length > 0 ? (
-                        <><p className="note">{rating?.rating}/5</p>
-                        <ReactStars key={business?.id} edit={false} count={5} value={rating?.rating} size={24} color2={'#ffd700'} /></>
-                    ) : (
-                        <p className="no-rating"> </p>
-                    )}
+                            <><p className="note">{rating?.rating}/5</p>
+                                <ReactStars key={business?.id} edit={false} count={5} value={rating?.rating} size={24} color2={'#ffd700'} /></>
+                        ) : (
+                            <p className="no-rating"> </p>
+                        )}
                     </div>
                     <div className="bloc1-content">
                         <h2 className="bloc1-title">{business.name}</h2>
@@ -145,50 +145,8 @@ const Description = ({ business, reviews, rating }: DescribingProps) => {
                 </div>
             </div>
 
-            {/* Modal de création de review
-            {
-                isModalOpen && (
-                    <div className="modal-overlay" onClick={() => setIsModalOpen(false)}>
-                        <div className="modal2" onClick={(e) => e.stopPropagation()}>
-                            <button onClick={() => setIsModalOpen(false)} className="close-btn2">Close</button>
-                            <h2 className="h2">Create a review</h2>
-                            <form onSubmit={handleSubmitReview}>
-                                <div className="form-group2">
-                                    <label>Rate your experience:</label>
-                                    <div className="stars2">
-                                        {[1, 2, 3, 4, 5].map((star) => (
-                                            <span
-                                                key={star}
-                                                className={`star2 ${rating1 >= star ? "selected" : ""}`}
-                                                onClick={() => handleStarClick(star)}
-                                            >
-                                                ★
-                                            </span>
-                                        ))}
-                                    </div>
-                                </div>
-                                <div className="form-group2">
-                                    <label htmlFor="title">Title of your review :</label>
-                                    <input type="text" id="title" value={title}
-                                        onChange={(e) => setTitle(e.target.value)}
-                                        placeholder="Title of your review"
-                                    />
-                                </div>
-                                <div className="form-group2">
-                                    <label htmlFor="content">Give us some details :</label>
-                                    <textarea id="content" value={content}
-                                        onChange={(e) => setContent(e.target.value)}
-                                        placeholder="Describe your experience"
-                                    ></textarea>
-                                </div>
-                                <button type="submit" className="submit-btn2"> Submit Review </button>
-                            </form>
-                        </div>
-                    </div>
-                )
-            } */}
         </>
     );
-};
+}
 
 export default Description;
