@@ -5,7 +5,9 @@ import Resetcard from '../components/Resetcard';
 
 
 function Login() {
-    const [page, setPage] = useState("login");
+    
+    const [page, setPage] = useState<string | number>("login");
+
 
     return (
         <div className='bg-[#F6EDD7] w-full min-h-screen '>

@@ -1,14 +1,11 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import "./ReviewForm.css";
-import { IBusines } from "../types/IBusiness";
 import RecentReviews from "../components/RecentReview";
 import { Link } from "react-router-dom";
 
-interface ReviewFormProps {
-  business: IBusines; 
-}
-function ReviewForm({business}: ReviewFormProps) {
+
+function ReviewForm() {
   const [rating, setRating] = useState(0);
   const [title, setTitle] = useState("");
   const [details, setDetails] = useState("");

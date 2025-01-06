@@ -52,7 +52,7 @@ function AboutUs() {
     },
   };
 
-  const handlePopupToggle = (memberKey) => {
+  const handlePopupToggle = (memberKey: any) => {
     setSelectedMember(teamMembers[memberKey]);
   };
 
