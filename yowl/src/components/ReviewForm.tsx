@@ -1,10 +1,14 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import "./ReviewForm.css";
+import { IBusines } from "../types/IBusiness";
 import RecentReviews from "../components/RecentReview";
 import { Link } from "react-router-dom";
 
-function ReviewForm() {
+interface ReviewFormProps {
+  business: IBusines; 
+}
+function ReviewForm({business}: ReviewFormProps) {
   const [rating, setRating] = useState(0);
   const [title, setTitle] = useState("");
   const [details, setDetails] = useState("");
@@ -23,7 +27,7 @@ function ReviewForm() {
   const [newCompanyLink, setNewCompanyLink] = useState("");
   const [newCompanyDescription, setNewCompanyDescription] = useState("");
   const [selectedImage, setSelectedImage] = useState(null);
-  const [imagePreview, setImagePreview] = useState(null);
+  const [imagePreview, setImagePreview] = useState<string | ArrayBuffer | null>(null);
 
   const userID = localStorage.getItem("user_id");
   const token = localStorage.getItem("Token")
@@ -74,22 +78,22 @@ function ReviewForm() {
   }, []);
 
 
-  const handleStarClick = (index) => {
+  const handleStarClick = (index: number) => {
     setRating(index);
   };
 
-  const handleSelectChange = (business) => {
+  const handleSelectChange = (business: any) => {
     setCompany(business.id);
     setShowDropdown(false);
   };
 
-  const handleCategorySelect = (category) => {
+  const handleCategorySelect = (category: any) => {
     setCategoryId(category.id);
     setCategory(category.name);
     setShowCategoryDropdown(false);
   };
 
-  const handleImageUpload = async (imageFile) => {
+  const handleImageUpload = async (imageFile: File) => {
     const formData = new FormData();
     formData.append('file', imageFile);
     formData.append("upload_preset", "ml_default");
@@ -112,7 +116,7 @@ function ReviewForm() {
     }
   };
 
-  const handleImageChange = (event) => {
+  const handleImageChange = (event: any) => {
     const file = event.target.files[0];
     setSelectedImage(file);
     const fileReader = new FileReader();
@@ -124,7 +128,7 @@ function ReviewForm() {
     }
   };
 
-  const handleSubmit = async (event) => {
+  const handleSubmit = async (event: any) => {
     event.preventDefault();
 
     if (!company && !newCompanyTitle) {

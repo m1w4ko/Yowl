@@ -14,11 +14,11 @@ interface DescribingProps {
     business: IBusines,
     reviews: IReviews[],
     users?: IUsers | null,
-    rating?: IRating | null
+    rating?: IRating | null,
     likes?: ILikes[] | null
 }
 
-function Description({ business, reviews, rating }: DescribingProps) {
+function Description({ business, reviews, users, rating, likes }: DescribingProps) {
 
     const navigate = useNavigate();
     const [reviewsFilter, setReviewsfilter] = useState(reviews);
@@ -137,7 +137,7 @@ function Description({ business, reviews, rating }: DescribingProps) {
                         {reviews && reviews.length > 0 && (
                             reviewsFilter && reviewsFilter.map((item) => (
                                 <div key={item.id}>
-                                    <Review reviews={item} />
+                                    <Review reviews={item} likes={likes || null} users={users || null} />
                                 </div>
                             ))
                         )}

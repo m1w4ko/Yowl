@@ -3,7 +3,11 @@ import "./logincard.css";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
-const Logincard = ({ setPage }) => {
+interface LoginCardProps {
+    setPage: React.Dispatch<React.SetStateAction<number | string>>;
+}
+
+const Logincard = ({ setPage }: LoginCardProps)  => {
     const navigate = useNavigate();
 
     const [email, setEmail] = useState("");
@@ -41,7 +45,7 @@ const Logincard = ({ setPage }) => {
     }
 
     const googleAuth = ()=> {
-        window.location = "http://localhost:3000/api/passport/auth/google";  
+        window.location.href = "http://localhost:3000/api/passport/auth/google";
       }
     
 

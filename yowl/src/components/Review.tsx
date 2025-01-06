@@ -6,11 +6,18 @@ import { IUsers } from "../types/IUsers";
 import axios from "axios";
 import ReactStars from "react-stars";
 
-function Review({ reviews, likes, user }: { reviews: IReviews, likes: ILikes, user: IUsers }) {
+interface ReviewProps {
+    reviews: IReviews;
+    likes: ILikes | null;
+    user: IUsers | null;
+}
+
+function Review({ reviews, likes }: ReviewProps) {
     const [isHovered, setIsHovered] = useState(false);
     const [isClicked, setIsClicked] = useState(likes?.is_liked || false);
     const [likeCount, setLikeCount] = useState(0);
     const [isLoggedIn, setIsLoggedIn] = useState<boolean>(!!localStorage.getItem("Token"));
+    
 
     const user_id = localStorage.getItem("user_id");
     const review_id = reviews.review_id;
@@ -107,13 +114,14 @@ function Review({ reviews, likes, user }: { reviews: IReviews, likes: ILikes, us
         }
     };
 
-    const formattedDate = new Date(reviews.createdAt).toLocaleDateString();
-
+    const formattedDate = reviews.createdAt 
+    ? new Date(reviews.createdAt).toLocaleDateString()
+    : "Unknown date";
     return (
         <div className="review-container">
             <div className="review-content">
                 <div className="userinfo">
-                    <img src={reviews.avatar} className="image" alt="User avatar" />
+                    <img  src={reviews.avatar} className="image" alt="User avatar" />
                     <h2 className="review-user">
                         {reviews.firstname} {reviews.lastname}
                     </h2>

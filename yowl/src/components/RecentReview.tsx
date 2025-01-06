@@ -1,11 +1,20 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import axios from "axios";
+import { IReviews } from "../types/IReviews";
 import "./RecentReview.css";
 
-function RecentReviews({ id, businessName }) {
-  const [reviews, setReviews] = useState([]);
+
+interface RecentReviewProps {
+  id: number;
+  businessName: string;
+}
+
+
+function RecentReviews({ id, businessName }: RecentReviewProps) {
+ 
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+  const [error, setError] = useState<string | null>(null);
+  const [reviews, setReviews] = useState<IReviews[]>([]);
 
   useEffect(() => {
     axios
@@ -48,7 +57,7 @@ function RecentReviews({ id, businessName }) {
                 className={`review-card ${
                   index % 2 === 0 ? "odd-card" : "even-card"
                 }`}
-                style={{ backgroundColor: review.color || "" }}
+                style={{ backgroundColor: review.color || "transparent" }}
               >
                 <div className="review-header">
                   {review.avatar ? (

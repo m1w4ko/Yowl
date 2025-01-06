@@ -32,7 +32,7 @@ console.log(password, confirmPassword, email)
       }, []);
     
 
-      const handleSubmit = async (e) => {
+      const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         try {
           const response = await fetch(`http://localhost:3000/api/auth/resetpassword`, {
@@ -55,7 +55,9 @@ console.log(password, confirmPassword, email)
             console.log("Failed to login.");
           }
         } catch (error) {
-          console.log("Error: " + error.message);
+          if (error instanceof Error) {
+          console.error(error.message);
+        }
         }
       };
     

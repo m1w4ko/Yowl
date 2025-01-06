@@ -2,13 +2,17 @@ import { useNavigate } from "react-router-dom";
 import "./resetcard.css";
 import { useState } from "react";
 
-const Resetcard = ({ setPage }) => {
+interface Props2 {
+  setPage: (page: string) => void;
+}
+
+const Resetcard = ({ setPage } :Props2) => {
 
     const navigate = useNavigate();
     const [email, setEmail] = useState("")
   
   
-    const handleSubmit = async (e) => {
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
       e.preventDefault();
       try {
         const response = await fetch(`http://localhost:3000/api/auth/sendtoken`, {
@@ -28,7 +32,7 @@ const Resetcard = ({ setPage }) => {
           console.log("Failed to send email.");
         }
       } catch (error) {
-        console.log("Error: " + error.message);
+        console.log("Error: ");
       }
     };
 

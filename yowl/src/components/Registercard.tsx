@@ -2,7 +2,11 @@ import { useState } from "react";
 import axios from "axios";
 import "./registercard.css";
 
-const Registercard = ({setPage}) => {
+interface Props {
+    setPage: (page: string) => void;
+  }
+
+const Registercard = ({setPage} : Props) => {
     
     const [firstname, setFirstname] = useState("");
     const [email, setEmail] = useState("");
