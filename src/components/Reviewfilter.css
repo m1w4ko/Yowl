@@ -1,0 +1,122 @@
+.filter-container {
+    background: #ffffff;
+    color: #333;
+    font-family: 'DM Sans', sans-serif;
+    padding: 40px 20px;
+    margin-top: 40px;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    max-width: 1200px;
+    margin: 0 auto;
+    border: 2px solid #e5e5e5;
+}
+
+.filter-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.filter-header h3 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #3d348b;
+}
+
+.filter-header p {
+    font-size: 16px;
+    color: #555;
+    margin-top: 5px;
+}
+
+.filter-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px;
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+}
+.rating-options {
+    display: flex;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.star {
+    font-size: 24px;
+    color: #ccc;
+    transition: color 0.3s;
+}
+
+.star:hover,
+.star.selected {
+    color: #ffc107;
+}
+
+.star:hover ~ .star {
+    color: #ccc;
+}
+
+.star.selected ~ .star {
+    color: #ccc;
+}
+.filter-group label {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #3d348b;
+}
+
+.filter-group select,
+.filter-group input {
+    padding: 12px;
+    font-size: 14px;
+    border-radius: 12px;
+    border: 1px solid #ccc;
+    background: #fafafa;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.filter-group select:focus,
+.filter-group input:focus {
+    outline: none;
+    border-color: #3d348b;
+    box-shadow: 0 0 5px rgba(61, 52, 139, 0.5);
+}
+
+.filter-btn {
+    background-color: #3d348b;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    align-self: center;
+    transition: all 0.3s ease;
+    width: 60%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.filter-btn:hover {
+    background-color: #7678ed;
+    color: #3d348b;
+    border: 2px solid #3d348b;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+    .filter-container {
+        padding: 30px 15px;
+    }
+
+    .filter-btn {
+        width: 90%;
+    }
+}

@@ -1,0 +1,154 @@
+.div-form {
+    flex: 1;
+    width: 450px;
+    justify-self: center;
+    background: #7678ed; 
+    padding: 25px 35px;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 500px; 
+    margin: 0 auto;
+}
+
+.div-form h3 {
+    font-family: "Lexend", sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: white;
+    text-align: center;
+}
+
+.line {
+    border: 0;
+    height: 1px;
+    width: 70%;
+    justify-self: center;
+    background: white;
+    margin-bottom: 50px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+}
+
+.form label {
+    font-weight: bold;
+    color: white;
+    margin-left: 10%;
+    width: 80%;
+}
+
+.form input {
+    width: 80%;
+    padding: 10px;
+    border-radius: 25px;
+    font-size: 15px;
+    background: white;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-left: 10%;
+}
+
+.reset-link {
+    color: white;
+    font-size: 15px;
+    margin-right: 10%;
+    text-decoration: none;
+    align-self: flex-end;
+    margin-bottom: 20px;
+    padding:0;
+}
+
+.reset-link:hover {
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.subco {
+    background-color: #f7b801;
+    color: white;
+    padding: 10px;
+    width: 40%;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 30%;
+}
+
+.form button:hover {
+    background-color: #7678ed;
+    border: 1px solid #3d348b;
+}
+
+
+.Register{
+    margin-top: 30px;
+    flex: 1;
+    width: 450px;
+    justify-self: center;
+    background: #f7b801; 
+    padding: 25px 35px;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 500px; 
+}
+
+.Register h3 {
+    font-family: "Lexend", sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: white;
+    text-align: center;
+}
+
+.create {
+    background-color: #7678ed;
+    color: white;
+    padding: 10px;
+    width: 50%;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 25%;
+}
+
+.create:hover {
+    background-color: #3d348b;
+}
+
+.google-signin-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.google-signin-btn {
+    background-color: white; 
+    border: 1px solid #dcdcdc; 
+    padding: 10px;
+    width: 50px; 
+    height: 50px;
+    border-radius: 10px; 
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+    margin-left: 165px;
+}
+
+
+.google-signin-btn:hover {
+    background-color: #f7f7f7;
+}
+
+.google-logo {
+    width: 30px;
+    height: 30px;
+}

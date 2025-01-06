@@ -1,0 +1,9 @@
+.Review {
+    font-family: 'DM Sans', sans-serif;
+    background-color: #E1DBFF;
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+    min-height: 100vh; 
+}

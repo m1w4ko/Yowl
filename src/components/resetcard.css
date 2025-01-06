@@ -1,0 +1,91 @@
+
+
+.div-form1 {
+    width: 450px;
+    justify-self: center;
+    background: #7678ed; 
+    padding: 25px 35px;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 500px; 
+}
+
+.t1{
+    font-family: "Lexend", sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: white;
+    text-align: center;
+}
+
+.text {
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: white;
+    text-align: center;
+}
+
+.line1 {
+    border: 0;
+    height: 1px;
+    width: 70%;
+    justify-self: center;
+    background: white;
+    margin-bottom: 30px;
+}
+
+.form1 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+}
+
+.form1 label {
+    font-weight: bold;
+    color: white;
+    margin-left: 10%;
+    width: 80%;
+}
+
+.form1 input {
+    width: 80%;
+    padding: 10px;
+    border-radius: 25px;
+    font-size: 15px;
+    background: white;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-left: 10%;
+}
+
+.reset{
+    color: white;
+    font-size: 15px;
+    text-decoration: none;
+    align-self: center;
+}
+
+.reset:hover {
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+
+.btmform2 {
+    background-color: #f7b801;
+    color: white;
+    padding: 10px;
+    width: 40%;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 30%;
+    margin-top: 10px;
+}
+
+.btnform2:hover {
+    background-color: #7678ed;
+    border: 1px solid #3d348b;
+}

@@ -1,0 +1,398 @@
+.contenant {
+  display: grid;
+  width: 95%;
+  height: 1300px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto; 
+  justify-self: center;
+  align-items: flex-start;
+  margin: 0;
+  padding: 0;
+}
+
+.first-card {
+  display: flex;
+  justify-self: center;
+  flex-direction: column;
+  width: 90%; 
+  height: 230px;
+  margin-top: 100px;
+  background-color: white;
+  border-radius: 25px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+}
+.pp{
+  display: flex;
+  height: 70px;
+  margin-top: 20px;
+}
+
+.pp img{
+  width: 100px;
+  height: 100px;
+  margin-right: 30px;
+}
+
+.first-card-image {
+  height: 130px; 
+  width: 130px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-right: 20px;
+}
+
+.username {
+  font-family: "Lexend", sans-serif;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #3d348b;
+  margin-bottom: 10px;
+}
+
+.catch{
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #A49ED3;
+  text-align: left;
+  font-weight: 500;
+  padding:0;
+}
+.first-card-content {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative; 
+  margin-left: 20px;
+}
+
+.info1{
+  margin-top: 10px;
+  font-size: 1.1rem;
+  color: #A49ED3;
+  text-align: left;
+  align-self: flex-start;
+}
+
+.logout-button{
+  background: #f7b801;
+  padding: 4px 12px;
+  border-radius: 20px;
+  color: white;
+  align-self: flex-end;
+  margin-right: 20px;
+  margin-top: -100px;
+}
+
+.logout-button:hover{
+  background: #7678ed;
+  cursor: pointer;
+}
+
+.sec-card {
+  width: 90%;
+  height: 78%;
+  justify-self: center;
+  background-color: white;
+  border-radius: 25px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 50px;
+  margin-bottom: 100px;
+  margin-top: -110px;
+}
+
+.sec-card h2{
+  font-size: 2rem;
+  font-weight: bold;
+  color: #7678ed;
+  margin-bottom: 10px;
+}
+
+.formmm {
+  width: 100%;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.formmm form{
+  width: 100%;
+  margin-top: 30px;
+}
+
+.sec-card h2 {
+  font-family: "Lexend", sans-serif;
+  margin-bottom: 20px;
+  color: #7678ED;
+  font-size: 2rem;
+  text-align: left;
+  font-weight: bold;
+}
+
+.group2 {
+  margin-bottom: 20px;
+  justify-self: center;
+  width: 100%;
+  align-self: center;
+  text-align: center;
+}
+
+.group2 label {
+  display: block;
+  margin-bottom: 9px;
+  font-size: 1.1rem;
+  color:  #3d348b;
+  font-weight: bold;
+  margin-top: 10px;
+  text-align: left !important;
+  padding-left: 50px;
+}
+
+.group2 input {
+  width: 80%;
+  height: 35px;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #7678ed;
+  color: #3d348b;
+  font-weight: 500;
+  border-radius: 10px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.3s ease-in-out;
+}
+
+.group2 input:focus {
+  outline: none;
+  border-color: #f7b801; 
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btnsub2 {
+  float: right ;
+  width: 30%;
+  padding: 7px 5px;
+  font-size: 1rem;
+  background-color: #F7B801;
+  color: white;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: 600;
+  margin-top: 20px;
+}
+
+.btnsub2:hover {
+  background-color: #7678ED;
+}
+
+.success-message{
+  color: #f7b801;
+  margin-top: 45px;
+  font-weight: bold;
+}
+
+
+.third-card {
+  width: 90%;
+  height: 70%;
+  justify-self: center;
+  margin-top: 100px;
+  background-color: white;
+  border-radius: 25px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 45px;
+  grid-row: span 2;
+}
+
+.third-card-title {
+  font-family: "Lexend", sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #7678ed;
+  margin-bottom: 20px;
+}
+
+.third-card-content {
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  position: relative; 
+  gap: 100px;
+  height: 30%;
+  justify-content: space-arround;
+}
+
+.nblikes{
+  font-size: 4rem;
+  font-weight: bold;
+  color:  #3d348b;
+}
+
+.third-card-content .details{
+  font-size: 1.2rem;
+  color: #A49ED3;
+  text-align: center;
+  font-weight: 500;
+}
+
+.historic1, .historic2{
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.reviews-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  height: 500px;
+  overflow-y: hidden; 
+  padding: 10px;
+}
+
+.reviews-detail.scrollable {
+  overflow-y: auto; 
+}
+
+.dividersp {
+  background: #7678ed;
+  width: 2px;
+  height: 100px;
+}
+
+.toggle-card-btn {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .contenant {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: auto; 
+    margin: 0 auto;
+  }
+
+  .sec-card,
+  .third-card {
+    width: 90%; 
+    height: auto;
+    margin: 20px 0; 
+    padding: 20px; 
+  }
+
+  .third-card{
+    margin-top: 50px;
+    margin-bottom: 150px;
+    height: 800px;
+  }
+
+  .first-card {
+    width: 90%;
+    height: 200px; 
+    margin: 30px 0;
+    padding: 20px;
+  }
+
+  .pp img {
+    width: 70px;
+    height: 70px;
+    margin-right: 15px;
+  }
+
+  .username {
+    font-size: 2.4rem;
+  }
+
+  .userinfoo p{
+    font-size: 1rem;
+  }
+
+  .catch, .info1 {
+    font-size: 0.9rem;
+    text-align: left;
+  }
+
+  .logout-button {
+    position: relative;
+    top: 10px;
+  }
+
+  .sec-card h2, .third-card-title {
+    font-size: 1.9rem;
+    text-align: center;
+    margin-top: 15px;
+  }
+
+  .group2 input {
+    width: 90%; 
+    margin: 0 auto; 
+  }
+
+  .btnsub2 {
+    width: 140px; 
+    font-weight: none;
+    font-size: 1rem;
+    float: none;
+    margin-left: 34%;
+  }
+
+  .reviews-detail {
+    max-height: 470px; 
+  }
+
+  .third-card-content {
+    gap: 70px;
+    justify-content: center;
+    height: 190px;
+    margin-bottom: 30px;
+  }
+
+  .nblikes {
+    font-size: 3.5rem;
+    padding: 0;
+  }
+
+
+  .third-card-content .details {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  .dividersp {
+    height: 90px; 
+  }
+
+  .sec-card {
+    display: none;
+}
+
+.sec-card.hidden {
+  display: none;
+}
+
+.sec-card:not(.hidden) {
+  display: block;
+}
+
+.toggle-card-btn {
+    display: block;
+    margin: 10px 0;
+    padding: 7px 20px;
+    background-color: #7678ed;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.toggle-card-btn:hover {
+  background-color: #3d348b;
+}
+
+.success-message{
+  justify-self: center;
+  margin-top: 20px;
+}
+}
+

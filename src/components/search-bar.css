@@ -1,0 +1,126 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.titre-barre {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 85vh;
+    text-align: center;
+    gap: 20px;
+    margin: 0;
+}
+
+.cont{
+    width: 100%;
+}
+.ImgHome{
+    width: 280px;
+    height: 280px;
+    justify-self: center;
+}
+
+.titre-barre h1 {
+    font-family: "Lexend", sans-serif;
+    font-size: 3.3rem;
+    font-weight: bold;
+    color: #3D348B;
+    margin-top: -30px;
+}
+
+.titre-barre p {
+    font-size: 1.3rem;
+    color: rgba(61, 52, 139, 0.8);
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    border: 2px solid #FFD700;
+    border-radius: 30px;
+    background-color: #FFFFFF; 
+    padding: 8px 30px; 
+    width: 40%; 
+    position: relative; 
+}
+
+.search-container input {
+    border: none; 
+    outline: none; 
+    font-size: 1rem; 
+    color: rgba(61, 52, 139, 0.8); 
+    background-color: transparent; 
+    width: 100%; 
+}
+
+
+.search-container img.search-icon {
+    height: 30px; 
+    margin-right: 15px;
+}
+
+.result p{
+    font-size: 1.3rem;
+    color: grey;
+    text-align: center;
+}
+
+.search-container button{
+    color: #f18701;
+    font-weight: bold;
+    padding: 3px;
+}
+
+.search-container button:hover{
+    color:  #f7b801;
+}
+
+
+.dropdown-container {
+    margin-top:-20px;
+    width: 40%;
+    background-color: white;
+    /* border: solid 1px #FFD700; */
+    border-radius: 15px;
+    max-height: 250px;
+    overflow-y: auto;
+}
+
+
+.dropdown-item {
+    padding: 10px;
+    cursor: pointer;
+    color: #f18701;
+}
+
+.dropdown-item:hover {
+    background-color: #f7f7f7;
+    color: #3D348B;
+}
+
+@media (max-width: 768px) {
+
+    .search-container {
+        width: 80%;
+        padding: 8px 20px;
+    }
+
+    .dropdown-container {
+        width: 80%; 
+    }
+
+    .titre-barre h1 {
+        font-size: 2.5rem; 
+    }
+
+    .titre-barre p {
+        font-size: 1.2rem;
+    }
+
+    .ImgHome{
+        width: 220px;
+        height: 220px;
+    }
+}

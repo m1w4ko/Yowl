@@ -1,0 +1,178 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@400;700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.body {
+  width: 100%;
+  overflow: hidden;
+  background: #f6edd7;
+  min-height: 100vh;
+}
+
+.title h1 {
+  text-align: center;
+  font-size: 40px;
+  font-family: "Lexend", sans-serif;
+  font-weight: bold;
+  color: #3d348b;
+  padding-top: 150px;
+}
+
+.categories-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  height: 30vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.scrolling-boxes {
+  display: flex;
+  white-space: nowrap;
+  align-items: center;
+  animation: scroll-infinite 40s linear infinite;
+}
+
+.box {
+  flex-shrink: 0;
+  width: 350px;
+  height: 100px;
+  margin-right: 20px;
+  background-color: #ddd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.box-title {
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+  color: #f6edd7;
+  font-family: "Lexend", sans-serif;
+}
+
+@keyframes scroll-infinite {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-20%);
+  }
+}
+
+.business-section {
+  margin-top: 40px;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.business-section h2 {
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.business-category {
+  margin-bottom: 30px;
+}
+
+.business-category h3 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+.business-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.business-item {
+  padding: 10px;
+  border-radius: 8px;
+  background-color: white;
+  width: 300px;
+  max-width: 300px;
+  height: auto;
+  padding: 40px 0;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  flex-grow: 1;
+}
+
+.business-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.business-item h2 {
+  font-family: "Lexend", sans-serif;
+  font-size: 30px;
+  color: #7678ed;
+}
+
+strong {
+  color: #3d348b;
+}
+
+.business-item p {
+  font-size: 18px;
+  color: #333;
+  margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+  .business-item {
+    width: 100%;
+    max-width: 350px;
+    margin-bottom: 20px;
+  }
+}
+
+.selected-category {
+  background-color: #7678ed !important;
+  color: #f6edd7 !important;
+}
+
+.card-stars {
+  font-size: 16px;
+  color: gold;
+  margin-bottom: auto;
+  display: flex;
+  justify-content: center;
+}
+
+img {
+    width: 25px;
+}
+
+.footer-box {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 50px;
+    padding-top: 15px;
+}
+
+.footer-box button {
+    background-color: #f7b801;
+    padding: 3px 10px;
+    border-radius: 25px;
+    color: white;
+}
+
+.footer-box button:hover {
+    background-color: #7678ed;
+}
