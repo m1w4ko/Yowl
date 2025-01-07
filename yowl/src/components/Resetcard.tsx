@@ -15,7 +15,7 @@ const Resetcard = ({ setPage } :Props2) => {
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
       e.preventDefault();
       try {
-        const response = await fetch(`https://truspilote-clone.vercel.app/auth/sendtoken`, {
+        const response = await fetch(`https://truspilote-clone.vercel.app/api/auth/sendtoken`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",

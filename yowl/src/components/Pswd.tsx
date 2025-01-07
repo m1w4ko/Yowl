@@ -16,7 +16,7 @@ console.log(password, confirmPassword, email)
 
     const verifyToken = () => {
         axios
-          .post(`http://localhost:3000/api/auth/verifytoken`, {
+          .post(`https://truspilote-clone.vercel.app/api/auth/verifytoken`, {
             token: token,
           })
           .then((response) => {
@@ -35,7 +35,7 @@ console.log(password, confirmPassword, email)
       const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         try {
-          const response = await fetch("https://truspilote-clone.vercel.app/auth/resetpasswor", {
+          const response = await fetch("https://truspilote-clone.vercel.app/api/auth/resetpasswor", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",

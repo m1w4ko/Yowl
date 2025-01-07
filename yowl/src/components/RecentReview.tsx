@@ -18,7 +18,7 @@ function RecentReviews({ id, businessName }: RecentReviewProps) {
 
   useEffect(() => {
     axios
-      .get(`https://truspilote-clone.vercel.app/reviews/last/${id}`)
+      .get(`https://truspilote-clone.vercel.app/api/reviews/last/${id}`)
       .then((response) => {
         const fetchedReviews = response.data.results;
 

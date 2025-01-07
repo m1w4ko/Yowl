@@ -31,7 +31,7 @@ function Cards({ business }: { business: IBusines }) {
 
     const fetchBusinessRatingData = async () => {
         try {
-            const response = await fetch(`"https://truspilote-clone.vercel.app/business/rating/${business.id}`);
+            const response = await fetch(`https://truspilote-clone.vercel.app/api/business/rating/${business.id}`);
             const data = await response.json();
             setRating(data.results[0].rating);
         } catch (error) {

@@ -18,7 +18,7 @@ const Logincard = ({ setPage }: LoginCardProps)  => {
     const handleLogin = async (e: any) => {
         e.preventDefault();
         try {
-            const response = await axios.post("https://truspilote-clone.vercel.app/auth/login", {
+            const response = await axios.post("https://truspilote-clone.vercel.app/api/auth/login", {
                 email,
                 password,
             });

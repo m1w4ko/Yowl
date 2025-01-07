@@ -17,7 +17,7 @@ function Company() {
     
         const fetchBusinessData = async () => {
             try {
-                const response = await fetch(`http://localhost:3000/api/business/${id}`);
+                const response = await fetch(`https://truspilote-clone.vercel.app/api/business/${id}`);
                 const data = await response.json();
                 console.log(data.results[0]);
                 
@@ -29,7 +29,7 @@ function Company() {
 
         const fetchBusinessRatingData = async () => {
             try {
-                const response = await fetch(`http://localhost:3000/api/business/rating/${id}`);
+                const response = await fetch(`https://truspilote-clone.vercel.app/api/business/rating/${id}`);
                 const data = await response.json();
                 setRating(data.results[0]);
             } catch (error) {
@@ -39,7 +39,7 @@ function Company() {
 
         const fetchReviewsData = async () => {
             try {
-                const response = await fetch(`http://localhost:3000/api/reviews/${id}`);
+                const response = await fetch(`https://truspilote-clone.vercel.app/api/reviews/${id}`);
                 const data = await response.json();
                 setReviews(data.results);
             } catch (error) {
@@ -49,7 +49,7 @@ function Company() {
 
         const fetchLikesData = async () => {
             try {
-                const response = await fetch(`http://localhost:3000/api/likes/get_likes_review/${id}`);
+                const response = await fetch(`https://truspilote-clone.vercel.app/api/likes/get_likes_review/${id}`);
                 const data = await response.json();
                 setLikes(data.results[0]);
             } catch (error) {

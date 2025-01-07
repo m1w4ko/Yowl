@@ -16,7 +16,7 @@ function Userrev({ review, fetchUser2Data }: {
 
     const deleteReview = () => {
         axios
-        .get(`https://truspilote-clone.vercel.app/reviews/delete/${review.id}`)
+        .get(`https://truspilote-clone.vercel.app/api/reviews/delete/${review.id}`)
         .then((response) => {
           if (response.data.results) {
             console.log(response.data.results)
@@ -31,7 +31,7 @@ function Userrev({ review, fetchUser2Data }: {
 
     const fetchBusinessData = async () => {
         try {
-            const response = await fetch(`https://truspilote-clone.vercel.app/business/${id}`);
+            const response = await fetch(`https://truspilote-clone.vercel.app/api/business/${id}`);
             const data = await response.json();
             console.log(data.results[0]);
             setBusiness(data.results[0]);
