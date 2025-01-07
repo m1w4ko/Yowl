@@ -20,7 +20,7 @@ function Searchbar() {
     }, [searchTerm]);
 
     const fetchBusiness = async (e: any) => {
-        const url = `http://localhost:3000/api/search/${e}`;
+        const url = `https://truspilote-clone.vercel.app/search/${e}`;
         try {
             const response = await fetch(url);
             const data = await response.json();

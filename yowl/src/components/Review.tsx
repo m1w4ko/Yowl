@@ -30,7 +30,7 @@ function Review({ reviews, likes }: ReviewProps) {
     useEffect(() => {
         const fetchLikes = async () => {
             try {
-                const response = await axios.get(`http://localhost:3000/api/likes/get_likes_review/${review_id}`);
+                const response = await axios.get(`https://truspilote-clone.vercel.app/likes/get_likes_review/${review_id}`);
                 
                 if (response.data && response.data.results[0].likes_count !== undefined) {
 
@@ -49,7 +49,7 @@ function Review({ reviews, likes }: ReviewProps) {
     useEffect(() => {
         const fetchUserLikeStatus = async () => {
             try {
-                const response = await axios.get(`http://localhost:3000/api/likes/get_likes_user/${user_id}/${review_id}`);
+                const response = await axios.get(`https://truspilote-clone.vercel.app/likes/get_likes_user/${user_id}/${review_id}`);
                 if (response.data && response.data.results.length > 0) {
                     setIsClicked(true);
                 } else {
@@ -71,7 +71,7 @@ function Review({ reviews, likes }: ReviewProps) {
 
         try {
             if (!isClicked) {
-                const response = await axios.post("http://localhost:3000/api/likes/create", {
+                const response = await axios.post("https://truspilote-clone.vercel.app/likes/create", {
                     user_id,
                     review_id,
                     is_liked: true,
@@ -84,7 +84,7 @@ function Review({ reviews, likes }: ReviewProps) {
                     setLikeCount((prev) => prev + 1);
                 }
             } else {
-                const response = await axios.post("http://localhost:3000/api/likes/update", {
+                const response = await axios.post("https://truspilote-clone.vercel.app/likes/update", {
                     user_id,
                     review_id,
                     is_liked: false,

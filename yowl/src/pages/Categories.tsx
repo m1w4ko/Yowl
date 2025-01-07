@@ -34,7 +34,7 @@ function Categories() {
   useEffect(() => {
     const fetchCategories = async () => {
       try {
-        const response = await fetch(`http://localhost:3000/api/categories/`);
+        const response = await fetch(`https://truspilote-clone.vercel.app/categories/`);
         const results = await response.json();
         if (results.results && Array.isArray(results.results)) {
           setCategories(results.results);
@@ -55,7 +55,7 @@ function Categories() {
   useEffect(() => {
     const fetchBusinesses = async () => {
       try {
-        const response = await fetch(`http://localhost:3000/api/business/`);
+        const response = await fetch(`https://truspilote-clone.vercel.app/business/`);
         const results = await response.json();
         if (results.results && Array.isArray(results.results)) {
           setBusinesses(results.results);

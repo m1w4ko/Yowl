@@ -13,13 +13,12 @@ const Logincard = ({ setPage }: LoginCardProps)  => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [message, setMessage] = useState("");
-    
 
 
     const handleLogin = async (e: any) => {
         e.preventDefault();
         try {
-            const response = await axios.post("http://localhost:3000/api/auth/login", {
+            const response = await axios.post("https://truspilote-clone.vercel.app/auth/login", {
                 email,
                 password,
             });
@@ -46,7 +45,7 @@ const Logincard = ({ setPage }: LoginCardProps)  => {
     }
 
     const googleAuth = ()=> {
-        window.location.href = "http://localhost:3000/api/passport/auth/google";
+        window.location.href = "https://truspilote-clone.vercel.app/passport/auth/google";
       }
     
 

@@ -35,7 +35,7 @@ console.log(password, confirmPassword, email)
       const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         try {
-          const response = await fetch(`http://localhost:3000/api/auth/resetpassword`, {
+          const response = await fetch("https://truspilote-clone.vercel.app/auth/resetpasswor", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",

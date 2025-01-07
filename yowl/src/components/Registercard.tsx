@@ -21,7 +21,7 @@ const Registercard = ({setPage} : Props) => {
     const handleRegister = async (e: any) => {
         e.preventDefault(); 
         try {
-            const response = await axios.post("http://localhost:3000/api/auth/register", {
+            const response = await axios.post("https://truspilote-clone.vercel.app/auth/register", {
                 firstname,
                 lastname,
                 email,

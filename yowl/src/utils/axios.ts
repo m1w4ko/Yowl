@@ -2,7 +2,7 @@ import axios from "axios";
 
 const createAxiosInstance = () => {
     let instance = axios.create({
-        baseURL: "http://localhost:3000/api",
+        baseURL: "https://truspilote-clone.vercel.app/",
         headers: {
             "Content-Type": "application/json"
         } 

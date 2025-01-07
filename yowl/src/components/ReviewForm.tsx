@@ -32,7 +32,7 @@ function ReviewForm() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3000/api/business")
+      .get("https://truspilote-clone.vercel.app/business")
       .then((response) => {
         if (Array.isArray(response.data.results)) {
           setBusinesses(response.data.results);
@@ -54,7 +54,7 @@ function ReviewForm() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3000/api/categories")
+      .get("https://truspilote-clone.vercel.app/categories")
       .then((response) => {
         if (Array.isArray(response.data.results)) {
           setCategories(response.data.results);
@@ -151,7 +151,7 @@ function ReviewForm() {
         };
 
         console.log("Data sent to backend:", newCompanyData);
-        await axios.post(`http://localhost:3000/api/business`, newCompanyData);
+        await axios.post(`https://truspilote-clone.vercel.app/business`, newCompanyData);
 
         // if (companyResponse.data && companyResponse.data.id) {
         //   companyId = companyResponse.data.id;
@@ -175,7 +175,7 @@ function ReviewForm() {
           verified: null,
         };
         console.log(reviewData);
-        await axios.post(`http://localhost:3000/api/reviews/${companyId}`, reviewData);
+        await axios.post(`https://truspilote-clone.vercel.app/reviews/${companyId}`, reviewData);
       }
 
 

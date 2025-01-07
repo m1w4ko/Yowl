@@ -5,8 +5,7 @@ import Resetcard from '../components/Resetcard';
 
 
 function Login() {
-    
-    const [page, setPage] = useState<string | number>("login");
+    const [page, setPage] = useState("login");
 
 
     return (

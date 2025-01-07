@@ -21,7 +21,7 @@ function Usercard({ user, userrev, fetchUser2Data }: { user: IUsers, userrev: an
 
     const fetchUserLikes = async () => {
         try {
-            const response = await axios.get(`http://localhost:3000/api/likes/get_likes_user/${id}`);
+            const response = await axios.get(`https://truspilote-clone.vercel.app/likes/get_likes_user/${id}`);
             console.log(response.data);
 
             if (response.data.results && response.data.results.length > 0) {
